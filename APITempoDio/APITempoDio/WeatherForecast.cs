@@ -8,6 +8,8 @@ namespace APITempoDio
 
         public int TemperatureF => 32 + (int)(TemperatureC / 0.5556);
 
+        public int Temperaturek => 273 + TemperatureC;
+
         public string? Summary { get; set; }
     }
 }
