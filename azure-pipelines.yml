@@ -30,3 +30,12 @@ steps:
   
 - script: dotnet teste $(solution) --configuration $(buildConfiguration)  no-build --collect:"Xplat Code Coverage"
   displayName: 'Build Solution' 
+  
+- task: Docker@2
+  inputs:
+    containerRegistry: 'acrapidemolfog'
+    repository: 'api-dio-test'
+    command: 'buildAndPush'
+    Dockerfile: './APITempoDio/Dockerfile'
+
+
