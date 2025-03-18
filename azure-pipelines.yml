@@ -26,4 +26,7 @@ steps:
   displayName: 'Restore Solution' 
 
 - script: dotnet build $(solution) --configuration $(buildConfiguration)
+  displayName: 'Build Solution'   
+  
+- script: dotnet teste $(solution) --configuration $(buildConfiguration)  no-build --collect:"Xplat Code Coverage"
   displayName: 'Build Solution' 
