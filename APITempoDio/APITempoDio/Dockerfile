@@ -16,7 +16,7 @@ COPY ["APITempoDio.csproj", "./"]
 RUN dotnet restore "APITempoDio.csproj"
 COPY . .
 WORKDIR "/src/"
-RUN dotnet build "/APITempoDio.csproj" -c $BUILD_CONFIGURATION -o /app/build
+RUN dotnet build "APITempoDio.csproj" -c $BUILD_CONFIGURATION -o /app/build
 
 # Esta fase é usada para publicar o projeto de serviço a ser copiado para a fase final
 FROM build AS publish
