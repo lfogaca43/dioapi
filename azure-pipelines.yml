@@ -36,6 +36,6 @@ steps:
     containerRegistry: 'acrapidemolfog'
     repository: 'api-dio-test'
     command: 'buildAndPush'
-    Dockerfile: './APITempoDio/Dockerfile'
+    Dockerfile: './APITempoDio/APITempoDio/Dockerfile'
 
 
